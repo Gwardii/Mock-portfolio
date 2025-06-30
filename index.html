@@ -11,8 +11,10 @@
     <h1>Welcome to My Portfolio</h1>
     <nav>
       <ul>
-        <li><a href="#about">About Me</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -20,16 +22,50 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I'm a web developer passionate about building interactive websites.</p>
-      <img src="profile.jpg" alt="Portrait of the website owner" />
+      <img src="profile.jpg" alt="Photo of me" />
+      <p>Hello! I'm a front-end web developer focused on building user-friendly and responsive websites. I enjoy combining design and functionality using HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li><button onclick="showAlert('Project A')">Project A</button></li>
-        <li><button onclick="showAlert('Project B')">Project B</button></li>
-      </ul>
+      <div class="project-card" onclick="showAlert('Responsive Blog')">
+        <img src="blog.jpg" alt="Screenshot of blog project" />
+        <h3>Responsive Blog</h3>
+        <p>A personal blog site built with HTML, CSS Grid, and Flexbox.</p>
+      </div>
+      <div class="project-card" onclick="showAlert('Weather App')">
+        <img src="weather.jpg" alt="Screenshot of weather app" />
+        <h3>Weather App</h3>
+        <p>JavaScript-based app that fetches real-time weather using an API.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="formResponse"></p>
     </section>
   </main>
 
